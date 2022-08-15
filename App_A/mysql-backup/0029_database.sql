@@ -37,7 +37,7 @@ CREATE TABLE `Hero` (
 
 LOCK TABLES `Hero` WRITE;
 /*!40000 ALTER TABLE `Hero` DISABLE KEYS */;
-INSERT INTO `Hero` VALUES (1,'The Hulk','As the Hulk, he possesses superhuman abilities including increased strength and durability.','https://th.wikipedia.org/wiki/%E0%B8%AE%E0%B8%B1%E0%B8%A5%E0%B8%84%E0%B9%8C'),(2,'Super man','Superman is a superhero who appears in American comic books published by DC Comics.','https://sites.google.com/a/rpg15.ac.th/dc-univures/_/rsrc/1501222539869/suppexr-maen-super-man/supes.png?height=300&width=400'),(3,'Spider man','Spider-Man is a superhero appearing in American comic books published by Marvel Comics.','https://static.wikia.nocookie.net/vsbattles/images/7/76/MCU_NWH_Classic_Spidey_render_by_ShakeResounding.png/revision/latest/scale-to-width-down/400?cb=20220318024006');
+INSERT INTO `Hero` VALUES (1,'Thor','As the Thor, he possesses superhuman abilities including increased strength and durability.','https://www.prachachat.net/wp-content/uploads/2019/07/iiii.png'),(2,'Super man','Superman is a superhero who appears in American comic books published by DC Comics.','https://sites.google.com/a/rpg15.ac.th/dc-univures/_/rsrc/1501222539869/suppexr-maen-super-man/supes.png?height=300&width=400'),(3,'Spider man','Spider-Man is a superhero appearing in American comic books published by Marvel Comics.','https://www.prachachat.net/wp-content/uploads/2019/08/spider-man-far-from-home.jpg');
 /*!40000 ALTER TABLE `Hero` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -98,4 +98,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-14 16:31:14
+-- Dump completed on 2022-08-14 23:11:44
