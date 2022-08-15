@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+  sv_web_exam:
+    container_name: web_exap
+    build:
+      context: ./
+      dockerfile: dockerfile-php
+    depends_on:
+      - sv_db_exam
+    restart: always
+    volumes:
+           - ./App_A/:/var/www/html
+    ports:
+        - '80:80'
+    networks:
+       vpcbr:
+         ipv4_address: 10.1.100.11
+ 
+  sv_db_exam:
+    image: mysql:5.6
+    volumes:
+    - ./App_A/mysql-backup/0029_database.sql:/docker-entrypoint-initdb.d/0029_database.sql:ro
+    container_name: db_exam
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rd
+      MYSQL_DATABASE: 0029_Lab_Exam 
+      MYSQL_USER: yhospat
+      MYSQL_PASSWORD: P@ssw0rd
+ 
+    ports:
+      - '3306:3306'
+    networks:
+       vpcbr:
+         ipv4_address: 10.1.100.22
+ 
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.100.0/24
+          gateway: 10.1.100.1
